@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!--
+    <h1>
+        사용자의 접속환경을<br>
+        확인하고 관련페이지로 <br>
+        이동하는 파일입니다.
+    </h1>
+
+    <div id="demo"></div>
+    -->
+
+    <script>
+        /*var txt = "";
+        txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+        document.getElementById("demo").innerHTML = txt;*/
+
+        var subStr = navigator.userAgent;
+        var idxChrome = subStr.indexOf("Chrome");
+        var idxiPhone = subStr.indexOf("iPhone");
+        var idxEdg = subStr.indexOf("Edg");
+
+        if (idxiPhone > 0) {
+            /*alert("스마트폰 : 아이폰");*/
+            location.href = "phone/index.html";
+        } else if (idxEdg > 0) {
+            /*alert("데스크탑PC : 에지브라우저");*/
+            location.href = "pc/index.html";
+        } else {
+            /*alert("데스크탑PC : 크롬브라우저");*/
+            location.href = "pc/index.html";
+        }
+    </script>
+
+</body></html>
+
+
+
+
+
+
+
+
